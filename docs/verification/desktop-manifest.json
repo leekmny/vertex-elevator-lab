@@ -1,0 +1,10 @@
+{
+  "builtAt": "2026-11-18T06:16:28.923Z",
+  "electronVersion": "45.3.4",
+  "platform": "win32",
+  "arch": "x64",
+  "executable": "release\\VERTEX-Windows\\VERTEX.exe",
+  "archive": "release\\VERTEX-Windows.zip",
+  "archiveBytes": 158542436,
+  "usesHttpServer": false
+}

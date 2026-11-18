@@ -1,0 +1,24 @@
+# Installed dependencies and generated application files
+node_modules/
+dist/
+release/
+.desktop-build/
+.desktop-stage/
+
+# Local audit copies, reports and browser artifacts
+.audit-recipient/
+test-results/
+playwright-report/
+blob-report/
+*.tsbuildinfo
+*.log
+
+# Local environment and editor/OS state
+.env
+.env.*
+!.env.example
+*.local
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

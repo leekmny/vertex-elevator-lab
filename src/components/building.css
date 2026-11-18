@@ -1,0 +1,96 @@
+.friendly-building {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 12px;
+}
+.friendly-building .building-canvas {
+  height: 530px;
+  width: 100%;
+  display: block;
+}
+.floor-call-buttons {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+.floor-call-buttons button {
+  position: absolute;
+  right: 12px;
+  transform: translateY(-50%);
+  pointer-events: auto;
+  background: #213c41;
+  color: #a9f2d9;
+  border: 1px solid #3f6d69;
+  border-radius: 7px;
+  padding: 5px 7px;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.floor-call-buttons button:hover {
+  background: #326259;
+  color: #fff;
+}
+.floor-call-buttons button:active {
+  background: #be722b;
+}
+.floor-call-buttons button span {
+  color: #76ad9f;
+  font-size: 10px;
+}
+.floor-call-buttons button:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+@media (max-width: 600px) {
+  .friendly-building .building-canvas {
+    height: 490px;
+  }
+  .floor-call-buttons button {
+    right: 6px;
+    padding: 4px 6px;
+    font-size: 10px;
+  }
+}
+.friendly-building {
+  max-height: 530px;
+  overflow: auto;
+  scrollbar-color: #426660 #14232c;
+  scrollbar-width: thin;
+}
+.friendly-building-scene {
+  position: relative;
+}
+.friendly-building-scene .building-canvas {
+  min-height: var(--building-height);
+}
+.simple-building .friendly-building {
+  max-height: 490px;
+}
+@media (min-width: 1600px) {
+  .simple-building .friendly-building {
+    max-height: 550px;
+  }
+}
+.simple-building .floor-call-buttons button {
+  height: 25px;
+  font-size: 10px;
+}
+.simple-building .floor-call-buttons button span {
+  display: inline;
+}
+@media (max-width: 600px) {
+  .simple-building .friendly-building {
+    max-height: 420px;
+  }
+}
+.building-scroll-hint {
+  margin: 0;
+  padding: 8px 14px;
+  font-size: 11px;
+  line-height: 1.5;
+  color: #8fb6b0;
+  background: #12242b;
+  border-top: 1px solid #243440;
+}

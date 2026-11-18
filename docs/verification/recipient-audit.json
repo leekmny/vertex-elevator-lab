@@ -1,0 +1,16 @@
+{
+  "checkedAt": "2026-11-18T05:44:21.814Z",
+  "pathExcludesNode": true,
+  "manualCalls": true,
+  "highSpeedCompletes": true,
+  "replayWorks": true,
+  "continuousRandom": true,
+  "offlineComparisonRows": 14,
+  "singleInstance": true,
+  "advancedRoundTrip": true,
+  "pageErrors": [],
+  "externalRequests": [],
+  "passed": true,
+  "executionLocation": "Temporary recipient extraction with Korean characters and spaces",
+  "packagingScope": "Runtime before project MIT file was added; application code unchanged"
+}

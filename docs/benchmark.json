@@ -1,0 +1,671 @@
+{
+  "measuredAt": "2026-11-18T05:42:16.267Z",
+  "environment": {
+    "node": "v26.13.1",
+    "platform": "win32",
+    "cpu": "AMD Ryzen 7 260 w/ Radeon 780M Graphics        ",
+    "logicalCpus": 16,
+    "memoryGB": 23.293933868408203
+  },
+  "notes": [
+    "Wall times device-specific; no rendering or Worker serialization.",
+    "Independent seeds paired within conditions.",
+    "Finite-horizon queue growth does not prove asymptotic capacity.",
+    "Energy estimated; Destination Dispatch has extra information."
+  ],
+  "microbenchmarks": [
+    {
+      "floors": 5,
+      "cars": 1,
+      "congestion": 0,
+      "duration": 120,
+      "generated": 0,
+      "events": 13,
+      "elapsedMs": [
+        0.23730000000000473,
+        0.12419999999997344,
+        0.10609999999996944
+      ],
+      "medianMs": 0.12419999999997344,
+      "passengerConservation": true
+    },
+    {
+      "floors": 20,
+      "cars": 2,
+      "congestion": 100,
+      "duration": 120,
+      "generated": 41,
+      "events": 277,
+      "elapsedMs": [
+        1.698699999999917,
+        1.1317000000001372,
+        1.008299999999963
+      ],
+      "medianMs": 1.1317000000001372,
+      "passengerConservation": true
+    },
+    {
+      "floors": 100,
+      "cars": 20,
+      "congestion": 500,
+      "duration": 120,
+      "generated": 232,
+      "events": 929,
+      "elapsedMs": [
+        15.017200000000003,
+        14.767699999999877,
+        13.220699999999852
+      ],
+      "medianMs": 14.767699999999877,
+      "passengerConservation": true
+    }
+  ],
+  "scaling": {
+    "elapsedMs": 1110.002,
+    "config": {
+      "floors": 20,
+      "basements": 0,
+      "cars": 2,
+      "floorHeight": 3.5,
+      "duration": 600,
+      "warmup": 0,
+      "drain": false,
+      "maxDrain": 3600,
+      "seed": 2026,
+      "rate": 24,
+      "congestion": 100,
+      "scenario": "random",
+      "policy": "shared",
+      "zoneCount": 2,
+      "zoneBoundaries": [],
+      "groupCars": [],
+      "lobby": 1,
+      "transferFloors": [
+        1
+      ],
+      "floorWeights": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "floorPopulation": [
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50
+      ],
+      "initialQueues": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "car": {
+        "capacity": 12,
+        "speed": 2.5,
+        "acceleration": 1,
+        "doorOpen": 1.5,
+        "doorClose": 1.5,
+        "boardTime": 0.8,
+        "alightTime": 0.6,
+        "home": 1
+      },
+      "carOverrides": [],
+      "weights": {
+        "wait": 1,
+        "journey": 0.5,
+        "fairness": 1,
+        "energy": 0.1,
+        "balance": 0.3
+      },
+      "idle": "lobby",
+      "failureAt": 180,
+      "failureCar": 0,
+      "longWait": 120
+    },
+    "plan": {
+      "floorValues": [
+        20
+      ],
+      "carValues": [
+        1,
+        2,
+        4,
+        8,
+        12
+      ],
+      "congestionValues": [
+        100
+      ],
+      "algorithms": [
+        "look",
+        "eta",
+        "destination",
+        "multi"
+      ],
+      "seeds": [
+        2026,
+        11999,
+        21972
+      ],
+      "targetWait": 30,
+      "metric": "meanWait"
+    },
+    "rows": [
+      {
+        "floors": 20,
+        "cars": 1,
+        "congestion": 100,
+        "algorithm": "look",
+        "n": 3,
+        "meanWait": 141.39351442150735,
+        "p95": 329.04445583502144,
+        "waitCi": [
+          113.77867607611896,
+          169.00835276689574
+        ],
+        "throughput": 9.4,
+        "unfinished": 143.33333333333334,
+        "queueGrowth": 14.333333333333334,
+        "estimatedEnergyKWh": 0.4376599687500002
+      },
+      {
+        "floors": 20,
+        "cars": 1,
+        "congestion": 100,
+        "algorithm": "eta",
+        "n": 3,
+        "meanWait": 141.39351442150735,
+        "p95": 329.04445583502144,
+        "waitCi": [
+          113.77867607611896,
+          169.00835276689574
+        ],
+        "throughput": 9.4,
+        "unfinished": 143.33333333333334,
+        "queueGrowth": 14.333333333333334,
+        "estimatedEnergyKWh": 0.4376599687500002
+      },
+      {
+        "floors": 20,
+        "cars": 1,
+        "congestion": 100,
+        "algorithm": "destination",
+        "n": 3,
+        "meanWait": 141.39351442150735,
+        "p95": 329.04445583502144,
+        "waitCi": [
+          113.77867607611896,
+          169.00835276689574
+        ],
+        "throughput": 9.4,
+        "unfinished": 143.33333333333334,
+        "queueGrowth": 14.333333333333334,
+        "estimatedEnergyKWh": 0.4376599687500002
+      },
+      {
+        "floors": 20,
+        "cars": 1,
+        "congestion": 100,
+        "algorithm": "multi",
+        "n": 3,
+        "meanWait": 141.39351442150735,
+        "p95": 329.04445583502144,
+        "waitCi": [
+          113.77867607611896,
+          169.00835276689574
+        ],
+        "throughput": 9.4,
+        "unfinished": 143.33333333333334,
+        "queueGrowth": 14.333333333333334,
+        "estimatedEnergyKWh": 0.4376599687500002
+      },
+      {
+        "floors": 20,
+        "cars": 2,
+        "congestion": 100,
+        "algorithm": "look",
+        "n": 3,
+        "meanWait": 105.96613134107146,
+        "p95": 276.0269400221332,
+        "waitCi": [
+          67.25437240512049,
+          144.6778902770224
+        ],
+        "throughput": 14.766666666666666,
+        "unfinished": 89.66666666666667,
+        "queueGrowth": 10.666666666666666,
+        "estimatedEnergyKWh": 0.8327430312500002
+      },
+      {
+        "floors": 20,
+        "cars": 2,
+        "congestion": 100,
+        "algorithm": "eta",
+        "n": 3,
+        "meanWait": 115.33836952457307,
+        "p95": 261.4815120899256,
+        "waitCi": [
+          84.70343390364586,
+          145.97330514550026
+        ],
+        "throughput": 14.200000000000001,
+        "unfinished": 95.33333333333333,
+        "queueGrowth": 7,
+        "estimatedEnergyKWh": 0.8388358281250001
+      },
+      {
+        "floors": 20,
+        "cars": 2,
+        "congestion": 100,
+        "algorithm": "destination",
+        "n": 3,
+        "meanWait": 117.06237878064603,
+        "p95": 302.96358054407244,
+        "waitCi": [
+          98.70318058835772,
+          135.42157697293433
+        ],
+        "throughput": 14.633333333333333,
+        "unfinished": 91,
+        "queueGrowth": 5.333333333333333,
+        "estimatedEnergyKWh": 0.8473523593750004
+      },
+      {
+        "floors": 20,
+        "cars": 2,
+        "congestion": 100,
+        "algorithm": "multi",
+        "n": 3,
+        "meanWait": 110.51195675908717,
+        "p95": 253.44206306336324,
+        "waitCi": [
+          95.78114160810513,
+          125.24277191006921
+        ],
+        "throughput": 14.333333333333334,
+        "unfinished": 94,
+        "queueGrowth": 11,
+        "estimatedEnergyKWh": 0.8339085
+      },
+      {
+        "floors": 20,
+        "cars": 4,
+        "congestion": 100,
+        "algorithm": "look",
+        "n": 3,
+        "meanWait": 60.39371579920074,
+        "p95": 173.5753719729192,
+        "waitCi": [
+          53.98567049769846,
+          66.80176110070303
+        ],
+        "throughput": 19,
+        "unfinished": 47.333333333333336,
+        "queueGrowth": -0.3333333333333333,
+        "estimatedEnergyKWh": 1.7899563593750003
+      },
+      {
+        "floors": 20,
+        "cars": 4,
+        "congestion": 100,
+        "algorithm": "eta",
+        "n": 3,
+        "meanWait": 64.09875196767631,
+        "p95": 187.45983202711508,
+        "waitCi": [
+          47.85729778483121,
+          80.3402061505214
+        ],
+        "throughput": 18.73333333333333,
+        "unfinished": 50,
+        "queueGrowth": 6,
+        "estimatedEnergyKWh": 1.784609609375
+      },
+      {
+        "floors": 20,
+        "cars": 4,
+        "congestion": 100,
+        "algorithm": "destination",
+        "n": 3,
+        "meanWait": 67.11892302906666,
+        "p95": 171.27741054117215,
+        "waitCi": [
+          52.45500759696327,
+          81.78283846117006
+        ],
+        "throughput": 18.833333333333332,
+        "unfinished": 49,
+        "queueGrowth": 2.3333333333333335,
+        "estimatedEnergyKWh": 1.8144095624999999
+      },
+      {
+        "floors": 20,
+        "cars": 4,
+        "congestion": 100,
+        "algorithm": "multi",
+        "n": 3,
+        "meanWait": 62.88691514476377,
+        "p95": 178.3113666311408,
+        "waitCi": [
+          36.83108576833473,
+          88.94274452119281
+        ],
+        "throughput": 19.133333333333336,
+        "unfinished": 46,
+        "queueGrowth": 1.3333333333333333,
+        "estimatedEnergyKWh": 1.790032625
+      },
+      {
+        "floors": 20,
+        "cars": 8,
+        "congestion": 100,
+        "algorithm": "look",
+        "n": 3,
+        "meanWait": 27.62703419297347,
+        "p95": 96.4455288157091,
+        "waitCi": [
+          17.612399733533028,
+          37.64166865241391
+        ],
+        "throughput": 21.366666666666664,
+        "unfinished": 23.666666666666668,
+        "queueGrowth": 2.3333333333333335,
+        "estimatedEnergyKWh": 4.239550421874999
+      },
+      {
+        "floors": 20,
+        "cars": 8,
+        "congestion": 100,
+        "algorithm": "eta",
+        "n": 3,
+        "meanWait": 29.32594106618372,
+        "p95": 88.05283648320386,
+        "waitCi": [
+          23.241425200836357,
+          35.41045693153109
+        ],
+        "throughput": 21.5,
+        "unfinished": 22.333333333333332,
+        "queueGrowth": 4,
+        "estimatedEnergyKWh": 4.216095781249998
+      },
+      {
+        "floors": 20,
+        "cars": 8,
+        "congestion": 100,
+        "algorithm": "destination",
+        "n": 3,
+        "meanWait": 28.60512375799946,
+        "p95": 84.25064396765056,
+        "waitCi": [
+          23.104317160304923,
+          34.105930355694
+        ],
+        "throughput": 21.5,
+        "unfinished": 22.333333333333332,
+        "queueGrowth": 3.6666666666666665,
+        "estimatedEnergyKWh": 4.259007937499998
+      },
+      {
+        "floors": 20,
+        "cars": 8,
+        "congestion": 100,
+        "algorithm": "multi",
+        "n": 3,
+        "meanWait": 32.26876809027522,
+        "p95": 94.15287534383884,
+        "waitCi": [
+          22.94207699565112,
+          41.595459184899326
+        ],
+        "throughput": 21.233333333333334,
+        "unfinished": 25,
+        "queueGrowth": 2,
+        "estimatedEnergyKWh": 4.2113447031249995
+      },
+      {
+        "floors": 20,
+        "cars": 12,
+        "congestion": 100,
+        "algorithm": "look",
+        "n": 3,
+        "meanWait": 21.67902230289962,
+        "p95": 61.62025528072593,
+        "waitCi": [
+          18.999957241377878,
+          24.358087364421365
+        ],
+        "throughput": 22.099999999999998,
+        "unfinished": 16.333333333333332,
+        "queueGrowth": 1.3333333333333333,
+        "estimatedEnergyKWh": 6.786380874999998
+      },
+      {
+        "floors": 20,
+        "cars": 12,
+        "congestion": 100,
+        "algorithm": "eta",
+        "n": 3,
+        "meanWait": 19.474766975495307,
+        "p95": 58.94823308209035,
+        "waitCi": [
+          15.724032145385555,
+          23.225501805605056
+        ],
+        "throughput": 22.400000000000002,
+        "unfinished": 13.333333333333334,
+        "queueGrowth": -0.6666666666666666,
+        "estimatedEnergyKWh": 5.6691938906249995
+      },
+      {
+        "floors": 20,
+        "cars": 12,
+        "congestion": 100,
+        "algorithm": "destination",
+        "n": 3,
+        "meanWait": 21.167672125207357,
+        "p95": 66.68091039895097,
+        "waitCi": [
+          18.783950512657498,
+          23.551393737757216
+        ],
+        "throughput": 22.133333333333336,
+        "unfinished": 16,
+        "queueGrowth": 2.3333333333333335,
+        "estimatedEnergyKWh": 5.615798984375
+      },
+      {
+        "floors": 20,
+        "cars": 12,
+        "congestion": 100,
+        "algorithm": "multi",
+        "n": 3,
+        "meanWait": 19.48132796123728,
+        "p95": 57.99459923917109,
+        "waitCi": [
+          14.743604278479557,
+          24.219051643995
+        ],
+        "throughput": 22.23333333333333,
+        "unfinished": 15,
+        "queueGrowth": 1.6666666666666667,
+        "estimatedEnergyKWh": 5.40373453125
+      }
+    ]
+  },
+  "saturation": {
+    "elapsedMs": 306.7367999999999,
+    "estimates": [
+      {
+        "algorithm": "look",
+        "points": 3,
+        "firstPositiveGrowthPercent": 100,
+        "firstConfidentGrowthPercent": 300,
+        "maxObservedThroughput": 20.066666666666666,
+        "thresholdBracket": null
+      },
+      {
+        "algorithm": "eta",
+        "points": 3,
+        "firstPositiveGrowthPercent": 100,
+        "firstConfidentGrowthPercent": 100,
+        "maxObservedThroughput": 19.133333333333333,
+        "thresholdBracket": null
+      }
+    ],
+    "rows": [
+      {
+        "floors": 20,
+        "cars": 2,
+        "congestion": 100,
+        "algorithm": "look",
+        "n": 3,
+        "meanWait": 65.21036622143332,
+        "p95": 159.23374730386445,
+        "waitCi": [
+          32.53455258558433,
+          97.88617985728231
+        ],
+        "throughput": 11.133333333333333,
+        "unfinished": 65.66666666666667,
+        "queueGrowth": 15.666666666666666,
+        "estimatedEnergyKWh": 0.41645640625
+      },
+      {
+        "floors": 20,
+        "cars": 2,
+        "congestion": 100,
+        "algorithm": "eta",
+        "n": 3,
+        "meanWait": 76.77096326500182,
+        "p95": 178.5561389805498,
+        "waitCi": [
+          68.8750237440674,
+          84.66690278593624
+        ],
+        "throughput": 11,
+        "unfinished": 66.33333333333333,
+        "queueGrowth": 16.666666666666668,
+        "estimatedEnergyKWh": 0.42112978125000017
+      },
+      {
+        "floors": 20,
+        "cars": 2,
+        "congestion": 300,
+        "algorithm": "look",
+        "n": 3,
+        "meanWait": 87.06036503225958,
+        "p95": 241.2821865961674,
+        "waitCi": [
+          59.27733587587722,
+          114.84339418864195
+        ],
+        "throughput": 16.066666666666666,
+        "unfinished": 268.3333333333333,
+        "queueGrowth": 40,
+        "estimatedEnergyKWh": 0.4091139687500001
+      },
+      {
+        "floors": 20,
+        "cars": 2,
+        "congestion": 300,
+        "algorithm": "eta",
+        "n": 3,
+        "meanWait": 87.71095269896624,
+        "p95": 236.28583379846,
+        "waitCi": [
+          66.30737262326925,
+          109.11453277466323
+        ],
+        "throughput": 16.266666666666666,
+        "unfinished": 267.3333333333333,
+        "queueGrowth": 38.333333333333336,
+        "estimatedEnergyKWh": 0.4082801562500001
+      },
+      {
+        "floors": 20,
+        "cars": 2,
+        "congestion": 500,
+        "algorithm": "look",
+        "n": 3,
+        "meanWait": 84.70418556996746,
+        "p95": 233.8652680165741,
+        "waitCi": [
+          65.92026601114176,
+          103.48810512879317
+        ],
+        "throughput": 20.066666666666666,
+        "unfinished": 495.3333333333333,
+        "queueGrowth": 96.33333333333333,
+        "estimatedEnergyKWh": 0.42096862500000015
+      },
+      {
+        "floors": 20,
+        "cars": 2,
+        "congestion": 500,
+        "algorithm": "eta",
+        "n": 3,
+        "meanWait": 85.07408679777082,
+        "p95": 232.73099043139362,
+        "waitCi": [
+          76.78879600610813,
+          93.3593775894335
+        ],
+        "throughput": 19.133333333333333,
+        "unfinished": 500,
+        "queueGrowth": 96.66666666666667,
+        "estimatedEnergyKWh": 0.42981250000000015
+      }
+    ]
+  }
+}

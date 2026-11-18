@@ -1,0 +1,20 @@
+{
+  "checkedAt": "2026-11-18T06:16:44.673Z",
+  "executablePath": "release\\VERTEX-Windows\\VERTEX.exe",
+  "scheme": "vertex:",
+  "offlineReload": true,
+  "workerSimulationAdvances": true,
+  "simultaneousCallsAddPassengers": true,
+  "occupiedCarCapacityVisible": true,
+  "beforeCall": 8,
+  "afterCall": 16,
+  "offlineComparisonAlgorithms": 14,
+  "firstTime": "00:01",
+  "secondTime": "00:01",
+  "rendererNodeIntegration": false,
+  "projectLicense": "MIT",
+  "projectLicensePreserved": true,
+  "pageErrors": [],
+  "httpRequests": [],
+  "normalLaunchNoListeningTCP": true
+}

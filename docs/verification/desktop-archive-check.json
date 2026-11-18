@@ -1,0 +1,11 @@
+{
+  "checkedAt": "2026-11-18T06:16:54.9358189Z",
+  "archive": "release\\VERTEX-Windows.zip",
+  "bundle": "release\\VERTEX-Windows",
+  "filesVerified": 76,
+  "uncompressedBytesVerified": 375234841,
+  "sha256EveryFileMatches": true,
+  "noMissingOrDuplicateFiles": true,
+  "archiveBytes": 158542436,
+  "archiveSha256": "F2F809E91A116629E69F9818EB091BB0510FBC7A49C410072154DE425A2119F8"
+}

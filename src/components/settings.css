@@ -1,0 +1,230 @@
+.settings-panel {
+  min-width: 0;
+  align-self: start;
+  overflow-y: auto !important;
+  scrollbar-width: thin;
+  scrollbar-color: #31495d transparent;
+}
+.settings-panel .settings-number-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+.settings-panel .settings-tabs {
+  display: flex;
+  border-bottom: 1px solid #233245;
+  padding: 0 12px;
+  gap: 5px;
+}
+.settings-panel .settings-tabs button {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  background: none;
+  color: #7e91a8;
+  font-size: 11px;
+  padding: 13px 4px;
+  border: 0;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+}
+.settings-panel .settings-tabs button.active {
+  color: #47d0ab;
+  border-bottom-color: #47d0ab;
+}
+.settings-panel .config-section {
+  padding: 18px 16px;
+  border-bottom: 1px solid #223044;
+}
+.settings-panel .section-label {
+  font:
+    9px ui-monospace,
+    monospace;
+  letter-spacing: 1.1px;
+  color: #6c849a;
+  margin-bottom: 16px;
+}
+.settings-panel .field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 14px;
+  font-size: 11px;
+  color: #a9b9cd;
+  min-width: 0;
+}
+.settings-panel .field > span {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+}
+.settings-panel .field > span small {
+  font:
+    9px ui-monospace,
+    monospace;
+  color: #5e7892;
+}
+.settings-panel .field input,
+.settings-panel .field select {
+  width: 100%;
+  min-width: 0;
+  background: #0c1520;
+  border: 1px solid #293a4f;
+  border-radius: 5px;
+  padding: 9px 10px;
+  color: #c6d6e5;
+  font-size: 12px;
+  outline: none;
+}
+.settings-panel .field input:focus,
+.settings-panel .field select:focus {
+  border-color: #398b77;
+}
+.settings-panel input[type='range'] {
+  width: 100%;
+  height: 4px;
+  accent-color: #3dcba6;
+  cursor: pointer;
+  margin: 9px 0;
+}
+.settings-panel .range-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 11px;
+  color: #95a9bf;
+  margin: 7px 0;
+}
+.settings-panel .range-heading strong {
+  font:
+    20px ui-monospace,
+    monospace;
+  color: #4cd8b2;
+}
+.settings-panel .range-heading strong small {
+  font-size: 9px;
+  margin-left: 4px;
+  color: #769a8d;
+}
+.settings-panel .range-ends {
+  display: flex;
+  justify-content: space-between;
+  font:
+    8px ui-monospace,
+    monospace;
+  color: #506982;
+  margin: 4px 0 18px;
+}
+.settings-panel .mini-summary {
+  font-size: 10px;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border: 1px solid #234138;
+  border-radius: 5px;
+  background: #142b2555;
+  color: #7f9f94;
+}
+.settings-panel .mini-summary strong {
+  color: #59ceac;
+  font:
+    12px ui-monospace,
+    monospace;
+}
+.settings-panel .algorithm-summary {
+  padding: 11px;
+  border: 1px solid #243b40;
+  border-radius: 5px;
+  background: #142c2a44;
+  margin-bottom: 17px;
+}
+.settings-panel .algorithm-summary p {
+  font-size: 10px;
+  line-height: 1.8;
+  margin: 10px 0 7px;
+  color: #8da89f;
+}
+.settings-panel .small-note {
+  font-size: 10px;
+  line-height: 1.75;
+  color: #6f879f;
+  margin: 9px 0;
+}
+.settings-panel .settings-check {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  margin: 12px 0 17px;
+  color: #a5bbcd;
+}
+.settings-panel .settings-check input {
+  accent-color: #3dccaa;
+}
+.settings-panel .floor-bars {
+  max-height: 230px;
+  overflow: auto;
+  padding-right: 5px;
+  margin-top: 16px;
+}
+.settings-panel .floor-bars label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 2px 5px;
+  border-radius: 3px;
+}
+.settings-panel .floor-bars label.selected {
+  background: #1c3933;
+}
+.settings-panel .floor-bars button {
+  width: 33px;
+  flex: none;
+  text-align: left;
+  color: #74968d;
+  background: none;
+  border: 0;
+  cursor: pointer;
+  font:
+    9px ui-monospace,
+    monospace;
+  padding: 4px 0;
+}
+.settings-panel .floor-bars input {
+  height: 3px;
+}
+.settings-panel .weight-control {
+  display: block;
+  margin: 14px 0;
+}
+.settings-panel .weight-control > span {
+  display: flex;
+  justify-content: space-between;
+  font-size: 10px;
+  color: #94a7bc;
+}
+.settings-panel .weight-control strong {
+  font:
+    11px ui-monospace,
+    monospace;
+  color: #43c6a4;
+}
+.settings-panel .settings-foot {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 14px 16px;
+  font-size: 9px;
+  color: #607e77;
+  background: #101e23;
+}
+.settings-panel .warning {
+  color: #ffad67 !important;
+}
+
+.settings-panel > * {
+  flex-shrink: 0;
+}

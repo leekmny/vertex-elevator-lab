@@ -1,0 +1,41 @@
+{
+  "name": "elevator-research-lab",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "main": "desktop/main.cjs",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "tsc -b && vite build",
+    "test": "vitest run",
+    "test:e2e": "playwright test",
+    "benchmark": "tsx scripts/benchmark.ts",
+    "format": "prettier --write src tests scripts desktop *.ts *.json",
+    "desktop": "npm run build && electron .",
+    "package:win": "npm run build && node scripts/package-desktop.mjs",
+    "test:desktop": "node scripts/desktop-smoke.mjs"
+  },
+  "dependencies": {
+    "echarts": "6.1.0",
+    "lucide-react": "^0.468.0",
+    "react": "19.3.1",
+    "react-dom": "19.3.1"
+  },
+  "devDependencies": {
+    "@electron/packager": "20.3.0",
+    "@playwright/test": "1.65.1",
+    "@tailwindcss/vite": "4.3.5",
+    "@types/node": "latest",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "@vitejs/plugin-react": "latest",
+    "electron": "45.3.4",
+    "prettier": "3.10.1",
+    "tailwindcss": "4.3.5",
+    "tsx": "latest",
+    "typescript": "latest",
+    "vite": "8.3.8",
+    "vitest": "5.1.0"
+  },
+  "license": "MIT"
+}

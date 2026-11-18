@@ -1,0 +1,140 @@
+{
+  "config": {
+    "floors": 20,
+    "basements": 0,
+    "cars": 2,
+    "floorHeight": 3.5,
+    "duration": 600,
+    "warmup": 0,
+    "drain": false,
+    "maxDrain": 3600,
+    "seed": 2026,
+    "rate": 24,
+    "congestion": 100,
+    "scenario": "random",
+    "policy": "shared",
+    "zoneCount": 2,
+    "zoneBoundaries": [],
+    "groupCars": [],
+    "lobby": 1,
+    "transferFloors": [
+      1
+    ],
+    "floorWeights": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "floorPopulation": [
+      50,
+      50,
+      50,
+      50,
+      50,
+      50,
+      50,
+      50,
+      50,
+      50,
+      50,
+      50,
+      50,
+      50,
+      50,
+      50,
+      50,
+      50,
+      50,
+      50
+    ],
+    "initialQueues": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "car": {
+      "capacity": 12,
+      "speed": 2.5,
+      "acceleration": 1,
+      "doorOpen": 1.5,
+      "doorClose": 1.5,
+      "boardTime": 0.8,
+      "alightTime": 0.6,
+      "home": 1
+    },
+    "carOverrides": [],
+    "weights": {
+      "wait": 1,
+      "journey": 0.5,
+      "fairness": 1,
+      "energy": 0.1,
+      "balance": 0.3
+    },
+    "idle": "lobby",
+    "failureAt": 180,
+    "failureCar": 0,
+    "longWait": 120
+  },
+  "plan": {
+    "floorValues": [
+      20
+    ],
+    "carValues": [
+      1,
+      2,
+      4,
+      8,
+      12
+    ],
+    "congestionValues": [
+      100
+    ],
+    "algorithms": [
+      "look",
+      "eta",
+      "destination",
+      "multi"
+    ],
+    "seeds": [
+      2026,
+      11999,
+      21972
+    ],
+    "targetWait": 30,
+    "metric": "meanWait"
+  }
+}
