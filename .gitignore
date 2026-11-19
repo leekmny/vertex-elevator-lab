@@ -1,6 +1,8 @@
 # Installed dependencies and generated application files
 node_modules/
 dist/
+rust/target/
+src/workers/generated/
 release/
 .desktop-build/
 .desktop-stage/

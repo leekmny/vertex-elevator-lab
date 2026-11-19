@@ -68,7 +68,7 @@ if (hasLock) {
         const headers = new Headers(response.headers);
         headers.set(
           'Content-Security-Policy',
-          "default-src 'self' blob: data:; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' blob: data:; font-src 'self' data:; connect-src 'self'; worker-src 'self' blob:; object-src 'none'; frame-src 'none'; base-uri 'self'",
+          "default-src 'self' blob: data:; script-src 'self' 'wasm-unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' blob: data:; font-src 'self' data:; connect-src 'self'; worker-src 'self' blob:; object-src 'none'; frame-src 'none'; base-uri 'self'",
         );
         headers.set('X-Content-Type-Options', 'nosniff');
         return new Response(response.body, { status: response.status, headers });

@@ -5,7 +5,10 @@
   "type": "module",
   "main": "desktop/main.cjs",
   "scripts": {
+    "build:rust": "node scripts/build-rust-wasm.mjs",
+    "predev": "npm run build:rust",
     "dev": "vite --host 127.0.0.1",
+    "prebuild": "npm run build:rust",
     "build": "tsc -b && vite build",
     "test": "vitest run",
     "test:e2e": "playwright test",

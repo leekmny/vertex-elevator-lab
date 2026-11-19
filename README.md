@@ -6,6 +6,21 @@
 
 직접 움직여 보고, 비교하며 배우는 엘리베이터 실험실입니다. “가까운 차를 보내면 항상 빠를까?”, “엘리베이터를 한 대 더 늘리면 얼마나 달라질까?” 같은 궁금증을 눈으로 확인해 보세요. 건물과 승객 흐름, 운행 방식을 바꾸며 가감속·문 개폐·정원까지 계산한 움직임을 관찰할 수 있습니다. 소스와 Windows 실행 프로그램을 함께 공개하는 학습·탐구 프로젝트입니다.
 
+## Rust 포팅판 실행
+
+`port/rust-simulation` 브랜치는 기존 화면에서 Rust로 만든 시뮬레이션을
+WebAssembly로 실행합니다. Node.js와 Rust 1.96 이상 및
+`rustup target add wasm32-unknown-unknown`을 준비하세요. 로컬 Cargo가
+없으면 Linux 컨테이너가 켜진 Docker Desktop으로도 빌드할 수 있습니다.
+
+```sh
+npm ci
+npm run dev
+```
+
+터미널에 표시된 주소를 브라우저에서 여세요. Windows 데스크톱에서 직접
+실행하려면 `npm run desktop`을 사용하세요. [Rust CLI 및 RECHECK 비교 재현](docs/RUST_PORT.md)
+
 ## Windows 다운로드
 
 **[최신 Windows 배포본 받기](../../releases/latest)**

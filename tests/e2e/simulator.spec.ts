@@ -83,6 +83,30 @@ test('calculated analysis chart renders after simulation and speed control works
   expect(Buffer.concat(chunks).subarray(0, 8).toString('hex')).toBe('89504e470d0a1a0a');
 });
 
+test('uses the default car spec for an empty imported override slot', async ({ page }) => {
+  const config = defaultConfig();
+  config.carOverrides[1] = { capacity: 9 };
+  await openAdvanced(page);
+  await page.locator('input[type=file]').setInputFiles({
+    name: 'sparse-config.json',
+    mimeType: 'application/json',
+    buffer: Buffer.from(JSON.stringify(config)),
+  });
+  await page.getByRole('button', { name: '시작', exact: true }).click();
+  await expect(page.getByTestId('simulation-time')).not.toHaveText('00:00');
+  await page.getByRole('button', { name: '일시정지', exact: true }).click();
+  const download = page.waitForEvent('download');
+  await page.getByRole('button', { name: '내보내기', exact: true }).click();
+  const stream = await (await download).createReadStream();
+  let json = '';
+  for await (const chunk of stream!) json += chunk.toString();
+  const exported = JSON.parse(json);
+  expect(exported.config.carOverrides).toEqual([null, { capacity: 9 }]);
+  expect(
+    exported.snapshots[0].cars.map((car: { spec: { capacity: number } }) => car.spec.capacity),
+  ).toEqual([config.car.capacity, 9]);
+});
+
 test('comparison workers reuse demand and advance algorithms to a common time', async ({
   page,
 }) => {
