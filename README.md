@@ -1,5 +1,7 @@
 # 엘리베이터 실험실 · VERTEX
 
+**한국어** | [English](README.en.md)
+
 [MIT License](LICENSE)로 공개하는 학습·탐구 프로젝트입니다.
 
 [아키텍처](docs/ARCHITECTURE.md) · [구현 범위와 검증 상태](docs/STATUS.md) · [물리·알고리즘 모델](docs/ENGINE.md) · [실제 벤치마크](docs/BENCHMARK.md) · [변경 기록](CHANGELOG.md) · [GitHub 배포 안내](docs/GITHUB_RELEASE.md)
